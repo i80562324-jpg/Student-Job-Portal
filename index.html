@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudentHire - Student Job Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="index.html" class="logo"><span class="logo-icon">S</span>Student<span>Hire</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="jobs.html">Find Jobs</a>
+      <a href="#categories">Categories</a>
+      <a href="#how-it-works">How It Works</a>
+    </nav>
+    <div class="nav-buttons">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="register.html" class="btn-primary">Sign Up</a>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+  <div class="hero-text">
+    <div class="hero-badge">🎓 Built for Students & Fresh Graduates</div>
+    <h1>Find the right job. <span>Build your future.</span></h1>
+    <p>Discover internships, part-time jobs, freelance opportunities and graduate positions designed for students and young professionals.</p>
+    <div class="search-box">
+      <div class="search-field"><span>🔍</span><input type="text" id="homeSearch" placeholder="Job title, skills or keywords"></div>
+      <div class="search-field"><span>📍</span><input type="text" id="homeLocation" placeholder="Location"></div>
+      <button onclick="searchJobs()" class="search-btn">Search Jobs</button>
+    </div>
+    <div class="popular-searches"><strong>Popular:</strong><span>Web Developer</span><span>Marketing</span><span>Graphic Designer</span><span>Internship</span></div>
+  </div>
+  <div class="hero-card">
+    <div class="floating-card card-one"><div class="company-logo blue">G</div><div><strong>Junior Developer</strong><small>TechNova Ltd.</small></div><span class="job-type">Full-time</span></div>
+    <div class="floating-card card-two"><div class="company-logo purple">D</div><div><strong>UI/UX Intern</strong><small>DesignHub</small></div><span class="job-type internship">Internship</span></div>
+    <div class="hero-illustration"><div class="person-circle">👨‍💻</div><div class="illustration-text"><h3>Career starts here</h3><p>Find opportunities made for you.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container stats-grid">
+  <div class="stat"><h2>5,000+</h2><p>Active Jobs</p></div>
+  <div class="stat"><h2>2,500+</h2><p>Companies</p></div>
+  <div class="stat"><h2>15,000+</h2><p>Students</p></div>
+  <div class="stat"><h2>1,200+</h2><p>Internships</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-heading"><div><span class="section-label">OPPORTUNITIES</span><h2>Featured Jobs</h2><p>Explore opportunities from companies looking for student talent.</p></div><a href="jobs.html" class="view-all">View All Jobs →</a></div>
+  <div class="job-grid">
+    <div class="job-card"><div class="job-top"><div class="company-logo blue">T</div><button class="save-job" onclick="saveJob(this)">♡</button></div><span class="job-category">Technology</span><h3>Junior Web Developer</h3><p class="company">TechNova Solutions</p><div class="job-info"><span>📍 Dhaka</span><span>💰 ৳25k - ৳35k</span></div><div class="job-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="job-bottom"><span>2 days ago</span><a href="job-details.html">View Job →</a></div></div>
+    <div class="job-card"><div class="job-top"><div class="company-logo purple">D</div><button class="save-job" onclick="saveJob(this)">♡</button></div><span class="job-category purple-text">Design</span><h3>UI/UX Design Intern</h3><p class="company">DesignHub Studio</p><div class="job-info"><span>📍 Chattogram</span><span>💰 ৳10k - ৳15k</span></div><div class="job-tags"><span>Figma</span><span>UI Design</span><span>Prototyping</span></div><div class="job-bottom"><span>1 day ago</span><a href="job-details.html">View Job →</a></div></div>
+    <div class="job-card"><div class="job-top"><div class="company-logo orange">M</div><button class="save-job" onclick="saveJob(this)">♡</button></div><span class="job-category orange-text">Marketing</span><h3>Digital Marketing Intern</h3><p class="company">MarketPro Agency</p><div class="job-info"><span>📍 Dhaka</span><span>💰 ৳12k - ৳18k</span></div><div class="job-tags"><span>SEO</span><span>Social Media</span><span>Content</span></div><div class="job-bottom"><span>3 days ago</span><a href="job-details.html">View Job →</a></div></div>
+    <div class="job-card"><div class="job-top"><div class="company-logo green">F</div><button class="save-job" onclick="saveJob(this)">♡</button></div><span class="job-category green-text">Finance</span><h3>Finance Assistant</h3><p class="company">FinEdge Bangladesh</p><div class="job-info"><span>📍 Sylhet</span><span>💰 ৳20k - ৳28k</span></div><div class="job-tags"><span>Excel</span><span>Accounting</span><span>Finance</span></div><div class="job-bottom"><span>4 days ago</span><a href="job-details.html">View Job →</a></div></div>
+  </div>
+</div>
+</section>
+
+<section class="section light-section" id="categories">
+<div class="container">
+  <div class="center-heading"><span class="section-label">EXPLORE</span><h2>Browse Jobs by Category</h2><p>Find opportunities based on your interests and skills.</p></div>
+  <div class="category-grid">
+    <a href="jobs.html?category=technology" class="category-card"><div class="category-icon blue-bg">💻</div><h3>Technology</h3><p>1,250 jobs</p></a>
+    <a href="jobs.html?category=design" class="category-card"><div class="category-icon purple-bg">🎨</div><h3>Design</h3><p>620 jobs</p></a>
+    <a href="jobs.html?category=marketing" class="category-card"><div class="category-icon orange-bg">📣</div><h3>Marketing</h3><p>850 jobs</p></a>
+    <a href="jobs.html?category=finance" class="category-card"><div class="category-icon green-bg">📊</div><h3>Finance</h3><p>430 jobs</p></a>
+    <a href="jobs.html?category=education" class="category-card"><div class="category-icon red-bg">📚</div><h3>Education</h3><p>310 jobs</p></a>
+    <a href="jobs.html" class="category-card"><div class="category-icon yellow-bg">➜</div><h3>View All</h3><p>5,000+ jobs</p></a>
+  </div>
+</div>
+</section>
+
+<section class="section" id="how-it-works">
+<div class="container">
+  <div class="center-heading"><span class="section-label">SIMPLE PROCESS</span><h2>How StudentHire Works</h2><p>Start your career in three simple steps.</p></div>
+  <div class="steps">
+    <div class="step"><div class="step-number">01</div><div class="step-icon">🔎</div><h3>Find a Job</h3><p>Search thousands of student-friendly jobs and internships.</p></div>
+    <div class="step"><div class="step-number">02</div><div class="step-icon">📄</div><h3>Apply Online</h3><p>Create your profile and apply directly to suitable jobs.</p></div>
+    <div class="step"><div class="step-number">03</div><div class="step-icon">🚀</div><h3>Start Your Career</h3><p>Connect with employers and take the next step in your career.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="cta"><div class="container cta-content"><div><h2>Ready to start your career?</h2><p>Join thousands of students finding their next opportunity.</p></div><a href="register.html" class="cta-button">Create Free Account →</a></div></section>
+
+<footer>
+<div class="container footer-grid">
+  <div><a href="index.html" class="logo footer-logo"><span class="logo-icon">S</span>Student<span>Hire</span></a><p>Helping students and graduates discover meaningful career opportunities.</p></div>
+  <div><h4>For Students</h4><a href="jobs.html">Find Jobs</a><a href="register.html">Create Profile</a><a href="student-dashboard.html">Dashboard</a></div>
+  <div><h4>For Employers</h4><a href="employer-dashboard.html">Post a Job</a><a href="register.html">Employer Registration</a></div>
+  <div><h4>Support</h4><a href="#">Help Center</a><a href="#">Contact Us</a><a href="#">Privacy Policy</a></div>
+</div>
+<div class="footer-bottom"><p>© 2026 StudentHire. All rights reserved.</p></div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
